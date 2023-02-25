@@ -12,28 +12,41 @@ async function main() {
     const DaiStable ="0x6B175474E89094C44Da98b954EedeAC495271d0F";
 
     // Reading from Uniswap
-    const Info = await web3.eth.getStorageAt(Uniswap, 1);
+    const Info = await web3.eth.getStorageAt(Uniswap, 6);
     console.log(`getUniswapStorageAt 1st position ${Info}`);
+    const storageNum = await web3.utils.toString(Info);
+    console.log(storageNum);
+
 
 
     // Reading from BNB contract
     const Info1 = await web3.eth.getStorageAt(BNBcontract, 2);
     console.log(`getBNBStorageAt 2nd position ${Info1}`);
-    //console.log('StorageAt 2nd postion: ' + web3.toDecimal(Info1));
+    //console.log('StorageAt 2nd postion: ' + web3.toDecimal(Info1));  //DONE
+    const storageNum1 = await web3.utils.toDecimal(Info1);
+    console.log(storageNum1);
 
 
     // Reading from Matic
     const Info2 = await web3.eth.getStorageAt(Matic, 0);
     console.log(`getMaticSTorageAt 0 position ${Info2}`);
+    const storageNum2 = await web3.utils.toDecimal(Info2);
+    console.log(storageNum2);
 
 
     // Reading from Shiba
     const Info3 = await web3.eth.getStorageAt(ShibaInu, 4);
     console.log(`getShibaStorageAt 4th position ${Info3}`);
+    const storageNum3 = await web3.utils.toAscii(Info3);          // DONE
+    console.log(storageNum3);
+
 
     // Reading from Dai
     const Info4 = await web3.eth.getStorageAt(DaiStable, 3);
     console.log(`getDaiStorageAt 3rd position ${Info4}`);
+    const storageNum4 = await web3.utils.toDecimal(Info4);      //DONE
+    console.log(storageNum4);
+
 
 
     
