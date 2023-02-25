@@ -1,0 +1,19 @@
+{
+  "name": "getstorage",
+  "version": "1.0.0",
+  "description": "A script that get storage at different position in 5 contracts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "oluwadunni rachael",
+  "license": "ISC",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^2.0.1",
+    "hardhat": "^2.12.7"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "web3": "^1.8.2"
+  }
+}
