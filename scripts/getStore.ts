@@ -12,9 +12,9 @@ async function main() {
     const DaiStable ="0x6B175474E89094C44Da98b954EedeAC495271d0F";
 
     // Reading from Uniswap
-    const Info = await web3.eth.getStorageAt(Uniswap, 6);
+    const Info = await web3.eth.getStorageAt(Uniswap, 3);
     console.log(`getUniswapStorageAt 1st position ${Info}`);
-    const storageNum = await web3.utils.toString(Info);
+    const storageNum = await web3.utils.toDecimal(Info);
     console.log(storageNum);
 
 
@@ -28,9 +28,9 @@ async function main() {
 
 
     // Reading from Matic
-    const Info2 = await web3.eth.getStorageAt(Matic, 0);
-    console.log(`getMaticSTorageAt 0 position ${Info2}`);
-    const storageNum2 = await web3.utils.toDecimal(Info2);
+    const Info2 = await web3.eth.getStorageAt(Matic, 6);
+    console.log(`getMaticSTorageAt 6 position ${Info2}`);
+    const storageNum2 = await web3.utils.toAscii(Info2);
     console.log(storageNum2);
 
 
